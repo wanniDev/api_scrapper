@@ -11,6 +11,9 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+
+    implementation("org.json:json:20231013")
+    implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
 }
 
 tasks.test {
