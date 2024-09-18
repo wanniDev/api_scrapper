@@ -31,7 +31,11 @@ class ApiEndPointUri(
 
     fun endPoint(): String {
         val sb = StringBuilder()
-        sb.append(schema).append("://").append(host).append(path)
+        sb
+            .append(schema)
+            .append("://")
+            .append(host)
+            .append(path)
         if (parameters.isNotEmpty()) {
             sb.append("?")
             parameters.forEachIndexed { index, parameter ->
@@ -47,11 +51,7 @@ class ApiEndPointUri(
         return sb.toString()
     }
 
-    fun headers(): List<ApiHeader> {
-        return headers
-    }
+    fun headers(): List<ApiHeader> = headers
 
-    fun parameters(): List<ApiParameter> {
-        return parameters
-    }
+    fun parameters(): List<ApiParameter> = parameters
 }
